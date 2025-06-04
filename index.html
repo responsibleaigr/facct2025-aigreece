@@ -13,12 +13,23 @@
     /* Page frame */
     body { background:#f6f8fa; margin:0; }
     .markdown-body { box-sizing:border-box; max-width:980px; margin:0 auto; padding:2rem; }
-    /* People cards */
+
+    /* People blocks */
     .person { display:flex; gap:1rem; align-items:flex-start; margin-bottom:1.8rem; }
-    .person img { width:120px; height:120px; border-radius:50%; object-fit:cover; background:#d0d7de; }
-    @media (max-width:600px){ .person{flex-direction:column; align-items:center; text-align:center;} }
+    .person img {
+      width:160px;        /* rectangular, all the same size */
+      height:120px;
+      object-fit:cover;   /* crops overflow neatly */
+      background:#d0d7de; /* neutral placeholder until real photo */
+    }
+    @media (max-width:600px){
+      .person{ flex-direction:column; align-items:center; text-align:center; }
+      .person img{ width:100%; height:auto; max-width:320px; }
+    }
+
     /* Section spacing */
     section { margin-top:3rem; }
+
     /* Dark mode */
     @media (prefers-color-scheme:dark){
       body{ background:#0d1117; }
@@ -97,7 +108,7 @@ reflecting on both the global dimensions of AI and its implications within the G
   <div>
     <h3>Kostas&nbsp;Karpouzis</h3>
     <em>Assistant Professor, Panteion University</em>
-    <p>Dr.&nbsp;Karpouzis researches affect-adaptive systems and serious games while examining the ethical values embedded in AI, and he sits on Greece’s National Bioethics & Tech Ethics Committee.</p>
+    <p>Dr.&nbsp;Karpouzis researches affect-adaptive systems and serious games while examining the ethical values embedded in AI, and he sits on Greece’s National Bioethics &amp; Tech Ethics Committee.</p>
   </div>
 </div>
 
