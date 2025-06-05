@@ -40,7 +40,45 @@
       .person img{ background:#30363d; }
     }
   </style>
+
+  <style>
+  /* === HERO (logo + title) ============================================ */
+  .hero        { display:flex; gap:1.5rem; align-items:center; justify-content:center; 
+                 text-align:left; margin-bottom:2.5rem; flex-wrap:wrap; }
+  .hero-logo   { flex:0 0 auto; }
+  .hero-logo img { height:100px; width:auto; }
+  .hero-text   { line-height:1.25; }
+  .hero-text h1{ font-size:2.1rem; margin:.2rem 0; }
+  .hero-text h2{ font-size:1.5rem; margin:.2rem 0; font-weight:500; }
+  .hero-text p { font-size:1.2rem; margin:.2rem 0; }
+
+  /* Stacks vertically on narrow screens */
+  @media (max-width:600px){
+    .hero       { flex-direction:column; text-align:center; }
+  }
+</style>
 </head>
+<div class="hero">
+  <!-- Logo (left) -->
+  <div class="hero-logo">
+    <a href="https://facctconference.org/2025/" target="_blank" rel="noopener">
+      <img src="img/facct-logo.png" alt="ACM FAccT 2025 logo">
+    </a>
+  </div>
+
+  <!-- Title lines -->
+  <div class="hero-text">
+    <h1>
+      <a href="https://facctconference.org/2025/" target="_blank" rel="noopener">
+        ACM&nbsp;FAccT&nbsp;2025
+      </a>
+    </h1>
+    <h2>Local Keynote</h2>
+    <p>Tuesday, June&nbsp;24, 9:00-10:00&nbsp;am</p>
+    <p>Athens Conservatoire</p>
+  </div>
+</div>
+
 
 <body>
 <article class="markdown-body">
